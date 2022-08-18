@@ -4,10 +4,13 @@ namespace ConsoleApp1;
 
 public static class Display
 {
+    public const int Width = 640;
+    public const int Height = 480;
+    
     public static void Initialize()
     {
         BGA.Setup();
-        BGA.SetVideoMode(640, 480);
+        BGA.SetVideoMode(Width, Height);
         PS2Mouse.X = BGA.Width / 2;
         PS2Mouse.Y = BGA.Height / 2;
     }

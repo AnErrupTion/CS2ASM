@@ -1,6 +1,7 @@
 ﻿using System.Platform.Amd64;
 using System.Runtime.CompilerServices;
 using ConsoleApp1.Components;
+using ConsoleApp1.Environment;
 
 namespace ConsoleApp1
 {
@@ -14,7 +15,13 @@ namespace ConsoleApp1
             Display.Initialize();
             Mouse.Initialize();
 
-            var test = new Button("Test Button", 50, 50, 90, 20);
+            var test = new Window("Test Window", 50, 50, 250, 190);
+            test.Opened = true;
+
+            WindowManager.ActiveWindow = test;
+            WindowManager.Windows.Add(test);
+
+            var button = new Button("Test Button", 80, 120, 90, 20);
 
             for (;;)
             {
@@ -23,6 +30,8 @@ namespace ConsoleApp1
                 Display.DrawText(((ulong)FPSMeter.FPS).ToString(), 42, 10, 0xFFFFFFFF);
                 test.Draw();
                 test.Update();
+                button.Draw();
+                button.Update();
                 Mouse.Draw();
                 Display.Update();
                 FPSMeter.Update();

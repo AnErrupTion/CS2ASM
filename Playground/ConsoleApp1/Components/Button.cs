@@ -1,3 +1,5 @@
+using ConsoleApp1.Environment;
+
 namespace ConsoleApp1.Components;
 
 public class Button
@@ -26,6 +28,6 @@ public class Button
 
     public void Update()
     {
-        _hovering = Mouse.IsInBounds(X, Y, Width, Height);
+        _hovering = !WindowManager.IsWindowMoving && Mouse.IsInBounds(X, Y, Width, Height);
     }
 }
