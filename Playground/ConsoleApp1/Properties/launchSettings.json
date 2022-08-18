@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "Boot using QEMU": {
-      "commandName": "Executable",
-      "executablePath": "dotnet",
-      "commandLineArgs": "CS2ASM.dll ConsoleApp1.dll ConsoleApp1.iso"
-    }
-  }
-}

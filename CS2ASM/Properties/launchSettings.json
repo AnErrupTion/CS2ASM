@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "CS2ASM": {
-      "commandName": "Project",
-      "commandLineArgs": "ConsoleApp1.dll ConsoleApp1.iso"
-    }
-  }
-}
