@@ -1,4 +1,4 @@
-namespace ConsoleApp1;
+namespace Mosaic;
 
 public static class Accents
 {

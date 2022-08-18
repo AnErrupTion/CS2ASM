@@ -1,6 +1,6 @@
 using System.Platform.Amd64;
 
-namespace ConsoleApp1;
+namespace Mosaic;
 
 public static class Display
 {
