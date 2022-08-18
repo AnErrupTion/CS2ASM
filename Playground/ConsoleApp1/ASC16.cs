@@ -1,6 +1,6 @@
 ﻿using System.Platform.Amd64;
 
-namespace Mosaic;
+namespace ConsoleApp1;
 
 public static unsafe class ASC16
 {

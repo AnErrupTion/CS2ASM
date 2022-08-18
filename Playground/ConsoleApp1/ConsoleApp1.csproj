@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<LangVersion>default</LangVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<DisableStandardFrameworkResolution>true</DisableStandardFrameworkResolution>
+		<DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<OutputPath>..\..\bin</OutputPath>
+		<UseAppHost>false</UseAppHost>
+		<NoWarn>1701;1702;0028</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+	  <DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
+
+	<Import Project="..\..\System.Platform.Amd64\System.Platform.Amd64.projitems" Label="Shared" />
+	<Import Project="..\..\System.Private.Corlib\Corlib.projitems" Label="Shared" />
+
+</Project>
