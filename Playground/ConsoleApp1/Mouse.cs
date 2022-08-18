@@ -43,7 +43,7 @@ public static class Mouse
                     Display.DrawPoint(w + PS2Mouse.X, h + PS2Mouse.Y, 0xFFFFFFFF);
 
                 if (_cursor[h * 12 + w] == 2)
-                    BGA.DrawPoint(w + PS2Mouse.X, h + PS2Mouse.Y, 0x0);
+                    Display.DrawPoint(w + PS2Mouse.X, h + PS2Mouse.Y, 0x0);
             }
     }
 }
