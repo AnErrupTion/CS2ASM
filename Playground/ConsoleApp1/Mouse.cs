@@ -4,6 +4,12 @@ namespace ConsoleApp1;
 
 public static class Mouse
 {
+    public static int X => PS2Mouse.X;
+    
+    public static int Y => PS2Mouse.Y;
+    
+    public static MouseStatus State => PS2Mouse.MouseStatus;
+    
     private static int[] _cursor;
     
     public static void Initialize()
@@ -45,5 +51,10 @@ public static class Mouse
                 if (_cursor[h * 12 + w] == 2)
                     Display.DrawPoint(w + PS2Mouse.X, h + PS2Mouse.Y, 0x0);
             }
+    }
+    
+    public static bool IsInBounds(int x, int y, int width, int height)
+    {
+        return Display.IsInBounds(X, x, Y, y, width, height);
     }
 }

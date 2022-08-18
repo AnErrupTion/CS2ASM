@@ -22,9 +22,21 @@ public static class Display
         BGA.DrawPoint(x, y, color);
     }
 
-    public static void DrawText(string text, uint x, uint y, uint color)
+    public static void DrawText(string text, int x, int y, uint color)
     {
-        ASC16.DrawString(text, x, y, color);
+        ASC16.DrawString(text, (uint)x, (uint)y, color);
+    }
+
+    public static void FillRectangle(int x, int y, int width, int height, uint color)
+    {
+        for (var yy = 0; yy < height; yy++)
+            for (var xx = 0; xx < width; xx++)
+                DrawPoint(xx + x, yy + y, color);
+    }
+    
+    public static bool IsInBounds(int x1, int x2, int y1, int y2, int width, int height)
+    {
+        return x1 >= x2 && x1 <= x2 + width && y1 >= y2 && y1 <= y2 + height;
     }
     
     public static void Update()
