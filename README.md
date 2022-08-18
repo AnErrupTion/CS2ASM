@@ -1,5 +1,5 @@
-# Unmaintained
-CS2ASM is unmaintained and development is now going towards [NativeCIL](https://github.com/AnErrupTion/NativeCIL).
+# Notice
+This is a personal fork of CS2ASM, and not the actual continuation of the latter. For reference, it is unmaintained and development is now going towards [NativeCIL](https://github.com/AnErrupTion/NativeCIL).
 
 # CS2ASM
 CS2ASM is a compiler which translates C# code into x86 assembly.<br/>
