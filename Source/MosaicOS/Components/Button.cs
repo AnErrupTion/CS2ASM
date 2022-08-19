@@ -1,6 +1,6 @@
-using ConsoleApp1.Environment;
+using MosaicOS.Environment;
 
-namespace ConsoleApp1.Components;
+namespace MosaicOS.Components;
 
 public class Button
 {
@@ -22,7 +22,8 @@ public class Button
 
     public void Draw()
     {
-        Display.FillRectangle(X, Y, Width, Height, _hovering ? Accents.HoverColor : Accents.BackColor);
+        Display.FillRectangle(X - 2, Y - 2, Width + 4, Height + 4, Accents.ActiveTitlebarColor);
+        Display.FillRectangle(X, Y, Width, Height, _hovering ? Accents.HoverColor : Accents.BodyColor);
         Display.DrawText(Text, X, Y, Accents.ForeColor);
     }
 

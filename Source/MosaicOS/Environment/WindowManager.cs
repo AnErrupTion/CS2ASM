@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using ConsoleApp1.Components;
+using MosaicOS.Components;
 
-namespace ConsoleApp1.Environment;
+namespace MosaicOS.Environment;
 
 public static class WindowManager
 {

@@ -1,11 +1,11 @@
 using System.Platform.Amd64;
 
-namespace ConsoleApp1;
+namespace MosaicOS;
 
 public static class Display
 {
-    public const int Width = 640;
-    public const int Height = 480;
+    public const int Width = 1024;
+    public const int Height = 768;
     
     public static void Initialize()
     {

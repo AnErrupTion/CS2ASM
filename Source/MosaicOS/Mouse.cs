@@ -1,6 +1,6 @@
 using System.Platform.Amd64;
 
-namespace ConsoleApp1;
+namespace MosaicOS;
 
 public static class Mouse
 {

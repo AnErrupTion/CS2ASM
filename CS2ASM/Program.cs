@@ -25,7 +25,7 @@ internal class Program
         {
             if (Debugger.IsAttached) 
             {
-                args = "CS2ASM -a0x100000 -camd64 -felf -tiso -ooutput.iso ConsoleApp1.dll".Split(" ");
+                args = "CS2ASM -a0x100000 -camd64 -felf -tiso -ooutput.iso MosaicOS.dll".Split(" ");
                 goto DebugStart;
             }
 
@@ -122,7 +122,7 @@ internal class Program
                 };
                 var name = Path.GetFileName(elf);
                 iso.AddFile("limine.sys", sys);
-                iso.AddFile("limine.cfg", Encoding.ASCII.GetBytes($"TIMEOUT=0\n:{def.Assembly.Name}\nPROTOCOL=multiboot1\nKERNEL_PATH=boot:///{name}"));
+                iso.AddFile("limine.cfg", Encoding.ASCII.GetBytes($"TIMEOUT=2\n:{def.Assembly.Name}\nPROTOCOL=multiboot1\nKERNEL_PATH=boot:///{name}"));
                 iso.AddFile(name, kernel);
                 iso.SetBootImage(cd, BootDeviceEmulation.NoEmulation, 0);
                 iso.Build(settings.OutputFile);

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS2ASM", "CS2ASM\CS2ASM.csproj", "{2FF4289D-F3BC-4A23-B386-ED82EC5177F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "Playground\ConsoleApp1\ConsoleApp1.csproj", "{8C8E73CB-A000-41C2-9DE4-961020EB4280}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MosaicOS", "Source\MosaicOS\MosaicOS.csproj", "{8C8E73CB-A000-41C2-9DE4-961020EB4280}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "System.Private.Corlib", "System.Private.Corlib\System.Private.Corlib.shproj", "{3B64FCA0-062D-4CA3-99A0-AD8CA8A49C80}"
 EndProject

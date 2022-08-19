@@ -1,7 +1,7 @@
 using System.Platform.Amd64;
-using ConsoleApp1.Environment;
+using MosaicOS.Environment;
 
-namespace ConsoleApp1.Components;
+namespace MosaicOS.Components;
 
 public class Window
 {
@@ -26,15 +26,11 @@ public class Window
 	{
 		if (!Opened)
 			return;
-   
-		// Title bar
-		Display.FillRectangle(X, Y, Width, TitlebarHeight, WindowManager.ActiveWindow == this ? Accents.ActiveTitlebarColor : Accents.InactiveTitlebarColor);
-   
-		// Title text
-		Display.DrawText(Title, X, Y, Accents.BodyColor);
-   
-		// Body
-		Display.FillRectangle(X, Y + TitlebarHeight - 1, Width, Height, Accents.BodyColor);
+
+		Display.FillRectangle(X - 2, Y - 2, Width + 4, Height + 4, WindowManager.ActiveWindow == this ? Accents.ActiveTitlebarColor : Accents.InactiveTitlebarColor);
+		Display.FillRectangle(X, Y, Width, Height, Accents.BodyColor);
+		Display.FillRectangle(X, Y + 20, Width, 2, Accents.ActiveTitlebarColor);
+		Display.DrawText(Title, X + 2, Y + 2, 0xFFFFFF);
 	}
    
 	public virtual void Update()
